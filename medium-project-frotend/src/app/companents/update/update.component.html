@@ -1,0 +1,66 @@
+<div class="form-floating mb-3 form-group">
+    <input type="text" class="form-control input-scss " id="nameInput" [(ngModel)]="MyId" placeholder="search Id">
+    <label for="nameInput">Search Id</label>
+  </div>
+
+  @if(!isTrue){
+
+    <div class="form-floating mb-3 form-group">
+      <input type="text" class="form-control input-scss" id="nameInput" placeholder="Name" [(ngModel)]="resultData.name">
+      <label for="nameInput">Name</label>
+    </div>
+    <div class="form-floating mb-3 form-group">
+      <input type="text" class="form-control input-scss" id="nameInput" placeholder="Name" [(ngModel)]="resultData.userName">
+      <label for="nameInput">UserNaame</label>
+    </div>
+    
+    <div class="form-floating mb-3 form-group">
+      <input type="email" class="form-control input-scss" id="emailInput" placeholder="name@example.com" [(ngModel)]="resultData.email">
+      <label for="emailInput">Email address</label>
+    </div>
+    <div class="form-floating mb-3 form-group">
+      <input type="text" class="form-control input-scss" id="bioInput" placeholder="Bio" [(ngModel)]="resultData.bio">
+    <label for="bioInput">Bio</label>
+  </div>
+  <div class="form-floating mb-3 form-group">
+    <input type="text" class="form-control input-scss" id="photoInput" placeholder="Photo path" [(ngModel)]="resultData.photoPath">
+    <label for="photoInput">Photo (path)</label>
+  </div>
+  <div class="form-floating mb-3 form-group">
+    <input type="number" class="form-control input-scss" id="followersInput" placeholder="Followers" [(ngModel)]="resultData.followersCount">
+    <label for="followersInput">Followers</label>
+  </div>
+  <div class="form-floating mb-3 form-group">
+    <input type="text" class="form-control input-scss" id="loginInput" placeholder="Login" [(ngModel)]="resultData.login">
+    <label for="loginInput">Login</label>
+  </div>
+  <div class="form-floating form-group">
+    <input type="password" class="form-control input-scss" id="passwordInput" placeholder="Password" [(ngModel)]="resultData.password">
+    <label for="passwordInput">Password</label>
+  </div>
+  
+  }
+  @else {
+    <h1>Submited</h1>
+  }
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">joinDate</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">{{User.id}}</th>
+            <td>{{User.name}}</td>
+            <td>{{User.email}}</td>
+            <td>{{User.joinDate}}</td>
+        </tr>
+    </tbody>
+  </table>
+  <button type="button" (click)="ngOnInit()" class="btn btn-outline-warning btn-kebab">Search</button>
+  <button type="button" (click)="Update()" class="btn btn-outline-success btn-kebab">Update</button>

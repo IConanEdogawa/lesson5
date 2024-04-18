@@ -1,0 +1,41 @@
+@if(!isTrue){
+
+  <div class="form-floating mb-3 form-group">
+    <input type="text" class="form-control input-scss" id="nameInput" placeholder="Name" [(ngModel)]="resultData.name">
+    <label for="nameInput">Name</label>
+  </div>
+  <div class="form-floating mb-3 form-group">
+    <input type="text" class="form-control input-scss" id="nameInput" placeholder="Name" [(ngModel)]="resultData.userName">
+    <label for="nameInput">UserNaame</label>
+  </div>
+  
+  <div class="form-floating mb-3 form-group">
+    <input type="email" class="form-control input-scss" id="emailInput" placeholder="name@example.com" [(ngModel)]="resultData.email">
+    <label for="emailInput">Email address</label>
+  </div>
+  <div class="form-floating mb-3 form-group">
+    <input type="text" class="form-control input-scss" id="bioInput" placeholder="Bio" [(ngModel)]="resultData.bio">
+  <label for="bioInput">Bio</label>
+</div>
+<div class="form-floating mb-3 form-group">
+  <input type="text" class="form-control input-scss" id="photoInput" placeholder="Photo path" [(ngModel)]="resultData.photoPath">
+  <label for="photoInput">Photo (path)</label>
+</div>
+<div class="form-floating mb-3 form-group">
+  <input type="number" class="form-control input-scss" id="followersInput" placeholder="Followers" [(ngModel)]="resultData.followersCount">
+  <label for="followersInput">Followers</label>
+</div>
+<div class="form-floating mb-3 form-group">
+  <input type="text" class="form-control input-scss" id="loginInput" placeholder="Login" [(ngModel)]="resultData.login">
+  <label for="loginInput">Login</label>
+</div>
+<div class="form-floating form-group">
+  <input type="password" class="form-control input-scss" id="passwordInput" placeholder="Password" [(ngModel)]="resultData.password">
+  <label for="passwordInput">Password</label>
+</div>
+<button type="submit" class="btn btn-success btn-group" (click)="setUser()">Submit</button>
+
+}
+@else {
+  <h1>Submited</h1>
+}

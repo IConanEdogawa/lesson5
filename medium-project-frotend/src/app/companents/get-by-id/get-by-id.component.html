@@ -1,0 +1,25 @@
+<div class="form-floating mb-3 form-group">
+    <input type="text" class="form-control input-scss" id="nameInput" [(ngModel)]="MyId" placeholder="Name">
+    <label for="nameInput">Name</label>
+  </div>
+
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">joinDate</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">{{User.id}}</th>
+            <td>{{User.name}}</td>
+            <td>{{User.email}}</td>
+            <td>{{User.joinDate}}</td>
+        </tr>
+    </tbody>
+  </table>
+  <button type="button" (click)="ngOnInit()" class="btn btn-outline-warning btn-kebab">Search</button>
