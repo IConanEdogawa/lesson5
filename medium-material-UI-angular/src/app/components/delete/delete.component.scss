@@ -1,0 +1,23 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .buttons-row{
+    display: flex; 
+    justify-content: center; // Center items horizontally
+    align-items: center; // Center items vertically
+    flex-wrap: nowrap; 
+    margin-left: 20px;
+    padding: 10px;
+    justify-content: space-between;
+  }
+  
+
+
+
