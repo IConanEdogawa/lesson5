@@ -8,20 +8,16 @@ import { ViewData } from '../../model/view-data';
   styleUrls: ['./get-by-id.component.scss']
 })
 export class GetByIdComponent {
-  MyId = '';
-
+  MyId: string = '';
   users: ViewData[] = [];
   displayedColumns: string[] = ['demo-position', 'demo-name', 'demo-email', 'demo-join-date'];
-  user: any;
 
   constructor(private crud: CrudService) {}
 
-  onSubmit(){
+  onSubmit() {
     this.crud.getById(this.MyId).subscribe({
-      next: (data) => {
-        this.user = data;
-        this.users.push(this.user);
-        console.log(data);
+      next: (data: ViewData) => {
+        this.users = [data]; // Replace the current users with the fetched user
       },
       error: (err) => {
         console.log(err);

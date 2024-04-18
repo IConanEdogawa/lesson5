@@ -1,0 +1,52 @@
+<mat-form-field class="example-full-width">
+    <mat-label>Id</mat-label>
+    <input matInput placeholder="Id" [(ngModel)]="searchId" name="Id">
+  </mat-form-field>
+
+
+<form class="example-form" (submit)="create()">
+    <mat-form-field class="example-full-width">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Ex. Name" [(ngModel)]="elementData.name" name="name">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>User Name</mat-label>
+      <input matInput placeholder="Ex. Username" [(ngModel)]="elementData.userName" name="userName">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Ex. example@gmail.com" [(ngModel)]="elementData.email" name="email">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Bio</mat-label>
+      <input matInput placeholder="Ex. bio..." [(ngModel)]="elementData.bio" name="bio">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Photo</mat-label>
+      <input matInput placeholder="Ex. XX/x/xx/x/x//x/x/x/" [(ngModel)]="elementData.photoPath" name="photoPath">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Followers Counts</mat-label>
+      <input matInput type="number" placeholder="Ex. 1200" [(ngModel)]="elementData.followersCount" name="followersCount">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Login</mat-label>
+      <input matInput placeholder="Ex. login" [(ngModel)]="elementData.login" name="login">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" placeholder="Ex. -------------" [(ngModel)]="elementData.password" name="password">
+    </mat-form-field>
+  
+    <div class="example-button-row">
+      <button mat-raised-button color="primary" type="submit">Create</button>
+    </div>
+  </form>
+  

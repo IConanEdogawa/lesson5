@@ -18,6 +18,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
+import { UpdateComponent } from './components/update/update.component';
 
 
 export interface PeriodicElement {
@@ -36,6 +37,7 @@ export interface PeriodicElement {
     DeleteComponent,
     CreateComponent,
     GetByIdComponent,
+    UpdateComponent,
   ],
   imports: [
     BrowserModule,
